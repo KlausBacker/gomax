@@ -1,0 +1,10 @@
+<mat-card class="show-card">
+  <mat-card-header>
+    <mat-card-title> Séance du {{show.startTime | date: 'dd/LL'}}</mat-card-title>
+    <mat-card-title> de {{show.startTime | date: 'HH:mm': '+0000'}} à {{show.endTime | date: 'HH:mm': '+0000'}}</mat-card-title>
+    <mat-card-subtitle>Salle {{show.roomShow.name}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['reservation/'+ show.id]">Réserver</button>
+  </mat-card-actions>
+</mat-card>

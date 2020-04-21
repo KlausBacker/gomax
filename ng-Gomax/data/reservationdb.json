@@ -1,0 +1,26 @@
+{
+  "reservation": [
+    {
+      "id_show": "1",
+      "film_id": "1",
+      "reservation_name": "Tarif Standard",
+      "date": "12/02/20",
+      "hour": "19h30",
+      "film_titre": "Le Facteur sonne toujours deux fois",
+      "film_url_affiche": "http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg",
+      "film_price": "20",
+      "showroom_id": "1"
+    },
+    {
+      "id_show": "1",
+      "film_id": "1",
+      "reservation_name": "Tarif Etudiant",
+      "date": "12/02/20",
+      "hour": "19h30",
+      "film_titre": "Le Facteur sonne toujours deux fois",
+      "film_url_affiche": "http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg",
+      "film_price": "15",
+      "showroom_id": "1"
+    }
+  ]
+}

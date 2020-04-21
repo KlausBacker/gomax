@@ -1,0 +1,36 @@
+<section>
+
+  <div class="reservationContainer">
+
+    <div class="imgMovie">
+      <img src="{{ film.film_url_affiche }}" alt="" class="imgFilm">
+    </div>
+
+    <div class="infosContainer">
+      <h5> {{ film.film_titre}} </h5>
+      <h5> {{ ShowInfos.startTime | date:'medium'}} </h5>
+      <h5> Tarif {{ price.name }}</h5>
+    </div>
+
+    <div>
+      <h5>{{ price.amount }} €</h5>
+    </div>
+
+    <div class="number-count">
+      <button mat-raised-button color="primary" (click)="addReservation()">+</button>
+      <div class="reservationQuantityNumber"> {{ reservationQuantity }} </div>
+      <button mat-raised-button color="primary" (click)="removeReservation()">-</button>
+    </div>
+
+    <div>
+      <h5>{{ totalPrice }} €</h5>
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+

@@ -1,0 +1,27 @@
+.cinemaRoomPlan {
+  width: fit-content;
+  margin: auto;
+  padding: 1%;
+  padding-top: 3%;
+}
+
+.roomElementContainer {
+  display: flex;
+}
+
+.exitLeftContainer {
+  width: fit-content;
+}
+
+.screenContainer {
+  width: fit-content;
+  margin: auto;
+}
+
+.exitRightContainer {
+  width: fit-content;
+}
+
+.numberSeatAvailable {
+  padding-bottom: 10%;
+}

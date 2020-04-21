@@ -1,0 +1,24 @@
+<h1>Sélectionnez un tarif</h1>
+
+<div class="topItemContainer">
+  <h3 id="containerShow"> Séance </h3>
+  <h3 id="containerPrice">Prix </h3>
+  <h3 id="containerQuantity">Quantité</h3>
+  <h3 id="containerTotal">Total</h3>
+</div>
+
+<gmx-reservation-list></gmx-reservation-list>
+
+<div class="TotalPriceContainer">
+  <div class="totalPriceContent">
+    <h4>Montant total à payer</h4>
+    <h4>{{ TotalReservationPrice }} €</h4>
+  </div>
+</div>
+
+
+<div class="example-button-row">
+  <button mat-raised-button color="primary" (click)="confirmBooking()">Payer</button>
+</div>
+
+

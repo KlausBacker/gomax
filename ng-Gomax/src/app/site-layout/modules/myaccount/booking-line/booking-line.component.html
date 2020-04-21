@@ -1,0 +1,15 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Commande numéro {{booking.id}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{booking.dateTo | date:' dd/MM/y ':'+0200'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <gmx-reservation-line *ngFor="let r of reservations" [reservation]="r"></gmx-reservation-line>
+
+  </mat-expansion-panel>
+</mat-accordion>

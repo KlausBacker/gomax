@@ -1,0 +1,58 @@
+.film-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 15px;
+  height: 500px;
+  background-color: black;
+  background-size: cover;
+  color: white;
+}
+.title-card {
+  width: 100%;
+  margin: 1.4em 0;
+  min-height: 50px;
+  max-height: 50px;
+}
+.film-img {
+  min-height: 300px;
+  max-height: 300px;
+}
+img {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content-card {
+  margin: 1.1em 31px;
+  box-sizing: border-box;
+  min-height: 51px;
+  max-height: 51px;
+  overflow: hidden;
+}
+.black-hidden {
+  color:black;
+}
+a.color-link {
+  text-decoration: none;
+}
+a.color-link:link {
+  color: white;
+}
+a.color-link:visited {
+  color: white;
+}
+a.color-link:hover {
+  color: lightsteelblue;
+}
+a.color-link:active {
+  color: white;
+}
+.mat-dialog-actions {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}

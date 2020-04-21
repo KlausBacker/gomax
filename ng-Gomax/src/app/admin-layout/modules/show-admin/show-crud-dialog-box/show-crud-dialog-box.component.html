@@ -1,0 +1,39 @@
+<h1 mat-dialog-title><strong>{{action}}</strong></h1>
+<div mat-dialog-content>
+  <div *ngIf="action != 'Delete'; else elseTemplate">
+    <mat-form-field>
+      <mat-label>Salle</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let r of rooms" value="{{r.name}}">
+          {{r.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Film</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let f of films" value="{{f.film_titre}}">
+          {{f.film_titre}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <div><label for="start-time">Début</label>
+      <input type="datetime-local" id="start-time"></div>
+    <br>
+    <div><label for="end-time">Fin</label>
+      <input type="datetime-local" id="end-time"></div>
+  </div>
+
+  <ng-template #elseTemplate>
+    Sure to delete <b>{{localData.name}}</b>?
+
+  </ng-template>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
+

@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="sidenav.toggle()"
+    class="burger"
+  >
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <img class="logo" routerLink="/home" src="../../../../../assets/img/logo/logo.png" height="200" width="300"/><span
+  class="space"></span>
+
+  <!-- spacer -->
+  <!-- links -->
+  <nav>
+    <span class="menu-item" routerLink="/home" routerLinkActive="active-link"><a class="color-link">Accueil</a></span>
+    <span class="menu-item" routerLink="/films" routerLinkActive="active-link"><a class="color-link">Films</a></span>
+    <span class="menu-item" routerLink="/Cinema" routerLinkActive="active-link"><a class="color-link">Cinémas</a></span>
+    <span class="menu-item" routerLink="/account" routerLinkActive="active-link"><a class="color-link">Mon compte</a></span>
+  </nav>
+</mat-toolbar>
+
+<!--Menu Burger-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/home'" routerLinkActive="current">Accueil</a>
+      <a mat-list-item [routerLink]="'/films'" routerLinkActive="current">Films</a>
+      <a mat-list-item [routerLink]="'/Cinema'" routerLinkActive="current">Cinema</a>
+      <a mat-list-item [routerLink]="'/account'" routerLinkActive="current">Mon compte</a>
+      <button mat-raised-button color="primary" (click)="sidenav.toggle()">Fermer</button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -1,0 +1,23 @@
+.show-card {
+  width: 300px;
+  max-width: 300px;
+  margin: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  background-size: cover;
+  color: white;
+}
+.mat-dialog-actions {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+mat-card-subtitle {
+  padding-top: 5%;
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+<mat-card class="film-card">
+  <mat-card-header>
+    <mat-card-title class="title-card">
+      <a class="color-link" [routerLink]="['details/'+ film.film_titre + '/' + film.film_id]">
+        {{ film.film_titre}}
+      </a>
+    </mat-card-title>
+  </mat-card-header>
+  <div class="film-img">
+    <a [routerLink]="['details/'+ film.film_titre + '/' + film.film_id]">
+      <img mat-card-image src="{{film.film_url_affiche}}" alt="{{ film.film_titre }} film picture">
+    </a>
+  </div>
+  <mat-card-content>
+    <p>Genre :
+      <span *ngFor="let cat of film.fcategories">
+          {{cat.film_genre}}
+        </span>
+    </p>
+
+    <p>
+      Durée : {{film.film_duree}}
+      <span class="black-hidden">Film id : {{film.film_id}}</span>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" [routerLink]="['details/'+ film.film_titre + '/' + film.film_id]">
+        DETAILS
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="['seances/'+ film.film_titre + '/' + film.film_id]">
+        SEANCES
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

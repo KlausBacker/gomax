@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="sidenav.toggle()"
+    class="burger"
+  >
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span class="home">GoMax Admin</span>
+  <!-- spacer -->
+  <span class="space"></span>
+  <!-- links -->
+
+</mat-toolbar>
+
+<!--Menu Burger-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'seance'" routerLinkActive="current">Séances</a>
+      <a mat-list-item routerLinkActive="current">Films</a>
+      <a mat-list-item routerLinkActive="current">Cinema</a>
+      <a mat-list-item [routerLink]="'/home'" routerLinkActive="current">Retour Site</a>
+      <button mat-raised-button color="primary" (click)="sidenav.toggle()">Fermer</button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

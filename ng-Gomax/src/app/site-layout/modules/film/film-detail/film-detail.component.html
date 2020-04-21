@@ -1,0 +1,32 @@
+<p *ngIf="!film">Chargement...</p>
+<div class="flex">
+  <mat-card *ngIf="film" class="film-detail">
+    <mat-card-header>
+      <mat-card-title>
+        <h1 class="smallerplease">{{film.film_titre}}</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <div class="film-img">
+      <img mat-card-image src="{{film.film_url_affiche}}">
+    </div>
+    <div class="content-margin">
+      <mat-card-content>
+        <p>Genre :
+          <span *ngFor="let cat of film.fcategories">
+            {{cat.film_genre}}
+          </span>
+        </p>
+        <p> Durée : {{film.film_duree}}</p>
+        <p>{{film.film_synopsis}}</p>
+      </mat-card-content>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="['/films/seances/'+ film.film_titre + '/' + film.film_id]">
+        SEANCES
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="['/films']">
+        LES AUTRES FILMS A L'AFFICHE
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

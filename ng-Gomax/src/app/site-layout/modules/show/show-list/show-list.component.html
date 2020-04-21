@@ -1,0 +1,8 @@
+<div class="align-list">
+  <h1 class="align-list">{{film.film_titre}}</h1>
+  <h2 class="align-list">Séances</h2>
+</div>
+
+<div class="show-list">
+  <gmx-show-card *ngFor="let s of shows" [show]="s"></gmx-show-card>
+</div>

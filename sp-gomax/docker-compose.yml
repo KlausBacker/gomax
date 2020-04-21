@@ -1,0 +1,46 @@
+services:
+  mysql-development:
+    image: mysql-server
+    environment:
+      MYSQL_DATABASE: gomax
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend
+    restart: always
+
+  back-endGomax:
+    build :
+      context: .
+      dockerfile: Dockerfile_back
+    ports:
+      - "8282:8282"
+    restart: always
+    depends_on:
+      - mysql-development # This service depends on mysql. Start that first.
+    networks:
+      - backend
+      - frontend
+
+  front-endGomax:
+    build:
+      context: .
+      dockerfile: Dockerfile_front
+    ports:
+      - "4200:4200"
+    restart: always
+    depends_on:
+      - back-endGomax # This service depends on backend. Start that first.
+    networks:
+      - frontend
+
+# Networks to be created to facilitate communication between containers
+networks:
+  backend:
+  frontend:
+

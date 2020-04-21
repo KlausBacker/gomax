@@ -1,0 +1,28 @@
+
+.reservationContainer {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  border-top: solid 0.5px lightgray;
+}
+
+.reservationContainer > div {
+  padding: 30px 60px 30px 60px;
+}
+
+.mat-form-field {
+  max-width: 30px;
+}
+
+.imgFilm {
+  max-width: 100px;
+}
+
+.number-count {
+  text-align: center;
+}
+
+.reservationQuantityNumber {
+  padding: 10%;
+}

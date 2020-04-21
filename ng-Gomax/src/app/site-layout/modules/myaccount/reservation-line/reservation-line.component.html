@@ -1,0 +1,37 @@
+<section class="reservationContainer">
+
+  <mat-list>
+
+    <mat-list-item class="reservationShow">Numéro de réservation
+      <div class="leftContentList">{{reservation.id}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item class="reservationShow">Film
+      <div class="leftContentList">{{reservation.show.film.film_titre}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item class="reservationShow">Séance
+      <div class="leftContentList">{{reservation.show.startTime | date:' HH:MM:SS, dd/MM/y':'+0200'}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item class="reservationShow">Salle
+      <div class="leftContentList">{{reservation.show.roomShow.name}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item class="reservationSeat">Siège réservé
+      <div
+        class="leftContentList">{{(reservation.seatReserved !== null) ? reservation.seatReserved.ref : "Aucun siège sélectionné" }}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-list-item class="reservationPrice">Prix de la commande
+      <div class="leftContentList">{{reservation.price}} €</div>
+    </mat-list-item>
+
+  </mat-list>
+
+</section>

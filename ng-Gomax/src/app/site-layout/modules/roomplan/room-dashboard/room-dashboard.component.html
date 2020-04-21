@@ -1,0 +1,21 @@
+<section class="cinemaRoomPlan">
+
+  <div class="numberSeatAvailable">
+    <div>Nombre de places réservables  :   <b>{{seatAvailable}}</b></div>
+  </div>
+
+<gmx-room-row *ngFor="let r of Rows" [row]="r.seatShows"></gmx-room-row>
+
+  <div class="roomElementContainer">
+    <div class="exitLeftContainer">
+      <div class="leftExit">Sortie</div>
+    </div>
+    <div class="screenContainer">
+      <div class="cinemaScreen">Ecran</div>
+    </div>
+    <div class="exitRightContainer">
+      <div class="rightExit">Sortie</div>
+    </div>
+  </div>
+
+</section>
